@@ -1,4 +1,4 @@
-name: StackRickAndMortin
+name: Build and deploy
 
 on:
   push:
@@ -6,30 +6,23 @@ on:
       - main
 
 jobs:
-  pipelines:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Echo the message
         run: echo "deploy application"
 
       - name: Checkout 🛎️
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+        uses: actions/checkout@v3
       
-      - name: Install 🔧
-        run: yarn install
+      - name: Install Packages 🔧
+        run: npm ci
       
       - name: Build 🏗️
-        run: yarn build
-        env:
-          CI: false
+        run: npm run build
 
       - name: Deploy to GH Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: main
+          branch: gh-pages
           folder: dist
