@@ -21,8 +21,6 @@ jobs:
       
       - name: Install 🔧
         run: yarn install
-
-      - run: npm ci
       
       - name: Build 🏗️
         run: yarn build
