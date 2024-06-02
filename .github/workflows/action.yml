@@ -23,4 +23,4 @@ jobs:
       - name: Build 🏗️
         run: yarn build
         env:
-          NODE_ENV: production
+          CI: false
