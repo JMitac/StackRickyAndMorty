@@ -19,17 +19,17 @@ export default defineConfig({
         theme_color: "#607D8B",
         icons: [
           {
-            src: "/assets/icon-192x192.png",
+            src: "/icon-192x192.png",
             sizes: "192x192",
             type: "image/png"
           },
           {
-            src: "/assets/icon-256x256.png",
+            src: "/icon-256x256.png",
             sizes: "256x256",
             type: "image/png"
           },
           {
-            src: "/assets/icon-512x512.png",
+            src: "/icon-512x512.png",
             sizes: "512x512",
             type: "image/png"
           }
