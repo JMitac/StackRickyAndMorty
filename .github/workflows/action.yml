@@ -1,5 +1,6 @@
 name: Build and deploy
-
+permissions:
+  contents: write
 on:
   push:
     branches:
@@ -24,5 +25,6 @@ jobs:
       - name: Deploy to GH Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
+          branch: main
           folder: dist
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
