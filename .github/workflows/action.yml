@@ -10,4 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo the message
-        run: echo "Hola Julio Mitac"
+        run: echo "deploy application"
+      
+      - name: Install 🔧
+        run: yarn install
+      
+      - name: Build 🏗️
+        run: yarn build
