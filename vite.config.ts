@@ -17,6 +17,7 @@ export default defineConfig({
         short_name: "Stack",
         description: "App Rick and Morty",
         theme_color: "#607D8B",
+        /*
         icons: [
           {
             src: "/icon-192x192.png",
@@ -33,7 +34,7 @@ export default defineConfig({
             sizes: "512x512",
             type: "image/png"
           }
-        ]
+        ]*/
       }
     })
   ],
