@@ -11,6 +11,11 @@ jobs:
     steps:
       - name: Echo the message
         run: echo "deploy application"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20"
       
       - name: Install 🔧
         run: yarn install
